@@ -1,4 +1,4 @@
-import { createClient } from "@/../bold-js/dist";
+import { createClient } from "@boldvideo/bold-js";
 
 export const bold = createClient(
   process.env.NEXT_PUBLIC_BOLD_API_KEY as string
