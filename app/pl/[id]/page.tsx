@@ -2,7 +2,10 @@ import Link from "next/link";
 import { bold } from "../../../client";
 
 export default async function ({ params }: any) {
+  if (!params.id) return null;
+
   const { data: playlist } = await bold.playlists.get(params.id);
+
   return (
     <div>
       <p>
