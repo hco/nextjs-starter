@@ -4,7 +4,7 @@ import { Player } from 'components/player'
 
 import { bold } from "../../../client";
 
-export default async function ({ params }) {
+export default async function ({ params }: any) {
   const video = await bold.videos.get(params.id);
   if (!video) return <p>loading</p>
   console.log(video)
