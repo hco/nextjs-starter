@@ -1,16 +1,13 @@
-
 import Link from "next/link";
-import { Player } from 'components/player'
+import { Player } from "components/player";
 
 import { bold } from "../../../client";
 
+export const dynamic = 'force-dynamic';
 export default async function ({ params }: any) {
-  if(!params.id) return null;
-
   const video = await bold.videos.get(params.id);
-  
-  if (!video) return <p>loading</p>
-  console.log(video)
+
+  if (!video) return <p>loading</p>;
   return (
     <div>
       <p>

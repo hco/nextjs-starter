@@ -1,10 +1,11 @@
 import Link from "next/link";
 import { bold } from "../../../client";
 
+export const dynamic = "force-dynamic";
 export default async function ({ params }: any) {
-  if (!params.id) return null;
-
   const { data: playlist } = await bold.playlists.get(params.id);
+
+  if (!playlist) return <p>loading</p>;
 
   return (
     <div>
