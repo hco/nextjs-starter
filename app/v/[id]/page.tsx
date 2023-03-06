@@ -4,10 +4,14 @@ import { bold } from "../../../client";
 import { formatRelative } from "date-fns";
 
 export const dynamic = "force-dynamic";
+
 export default async function ({ params }: any) {
   const { data: video } = await bold.videos.get(params.id);
 
+  console.log('video', video)
+
   if (!video) return <p>loading</p>;
+
   return (
     <div className="flex flex-col">
       <div className="relative -mx-5 md:-mx-10 -mt-5 md:-mt-10 mb-5 md:mb-10 flex justify-center max-h-[calc(100vh-240px)]">
