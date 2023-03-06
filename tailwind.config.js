@@ -1,0 +1,65 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+    },
+    colors: {
+      white: '#ffffff',
+      black: '#000000',
+      gray: {
+        100: "#F9FAFB",
+        200: "#F3F4F6",
+        300: "#E5E7EB",
+        400: "#D1D5DB",
+        500: "#9CA3AF",
+        600: "#6B7280",
+        700: "#4B5563",
+        800: "#374151",
+        900: "#1F2937",
+        1000: "#111827",
+      },
+      highlight: {
+        100: "#ECFDFB",
+        200: "#D9FBF6",
+        300: "#B3F7EE",
+        400: "#8DF2E5",
+        500: "#67EEDD",
+        600: "#41EAD4",
+        700: "#34BBAA",
+        800: "#34BBAA",
+        900: "#1A5E55",
+        1000: "#1A5E55",
+      },
+      primary: {
+        100: "#FFE9F1",
+        200: "#FFD2E2",
+        300: "#FFA6C5",
+        400: "#FF79A8",
+        500: "#FF4D8B",
+        600: "#FF206E",
+        700: "#CC1A58",
+        800: "#991342",
+        900: "#660D2C",
+        1000: "#330616",
+      },
+      secondary: {
+        100: "#FFFFE7",
+        200: "#FEFFD0",
+        300: "#FDFFA0",
+        400: "#FDFF71",
+        500: "#FCFF41",
+        600: "#FBFF12",
+        700: "#97990B",
+        800: "#97990B",
+        900: "#646607",
+        1000: "#323304",
+      }
+    },
+  },
+  plugins: [],
+};
