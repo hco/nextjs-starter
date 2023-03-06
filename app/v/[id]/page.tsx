@@ -11,7 +11,7 @@ export default async function ({ params }: any) {
   if (!video) return <p>loading</p>;
   return (
     <div className="flex flex-col">
-      <div className="relative -mx-10 -mt-10 mb-10 flex justify-center max-h-[calc(100vh-240px)] ">
+      <div className="relative -mx-10 -mt-10 mb-10 flex justify-center max-h-[calc(100vh-240px)]">
         <Player video={video} />
       </div>
       <div className="max-w-4xl mx-auto px-10">
