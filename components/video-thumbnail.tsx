@@ -4,7 +4,6 @@ import formatRelative from "date-fns/formatRelative";
 import { formatDuration } from "util/format-duration"
 
 export function VideoThumbnail({ video }: { video: any }) {
-  console.log(video)
   return (
     <div className="aspect-video group relative ">
       <div className="aspect-video relative overflow-hidden">
