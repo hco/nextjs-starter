@@ -14,7 +14,7 @@ export default function RootLayout({
       */}
       <head />
       <body className="bg-gray-1000 text-white">
-        <header className="h-20 px-10 py-4 flex items-center justify-between">
+        <header className="h-20 px-5 md:px-10 py-4 flex items-center justify-between">
           <nav>
             <h1>
               <Link href="/">
@@ -23,7 +23,7 @@ export default function RootLayout({
             </h1>
           </nav>
         </header>
-        <main className="p-10">{children}</main>
+        <main className="p-5 md:p-10">{children}</main>
       </body>
     </html>
   );
