@@ -1,15 +1,14 @@
 import Link from "next/link";
+import Image from "next/image";
+import { formatRelative } from 'date-fns'
 
 import { bold } from "client";
-import Image from "next/image";
 
 export default async function Home() {
   const settings = await bold.settings();
   const videos = await bold.videos.list();
-  const playlists = await bold.playlists.list();
 
   console.log("settings", settings);
-  console.log("playlists", playlists);
 
   return (
     <div className="">
@@ -21,14 +20,7 @@ export default async function Home() {
           </li>
         ))}
       </ul>
-      <h1>Playlists</h1>
-      <ul>
-        {playlists.data.map((pl) => (
-          <li>
-            <Link href={`/pl/${pl.id}`}>{pl.title}</Link>
-          </li>
-        ))}
-      </ul>
+
     </div>
   );
 }
@@ -44,6 +36,6 @@ function VideoThumbnail({video}: {video: any}) {
         <span>{video.title}</span>
       </Link>
     </h3>
-    <p className="text-gray-500 text-sm">{video.published_at}</p>
+    <p className="text-gray-500 text-sm">{formatRelative(new Date(video.published_at), new Date())}</p>
   </div>
 }
