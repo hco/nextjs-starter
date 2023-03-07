@@ -2,11 +2,12 @@ import Link from 'next/link'
 import { bold } from "client";
 import { VideoThumbnail } from 'components/video-thumbnail'
 
+export const revalidate = 60;
+
 export default async function Home() {
   const { data: settings } = await bold.settings();
   const videos = await bold.videos.list();
 
-  console.log("settings", settings);
 
   return (
     <div className="max-w-screen-2xl mx-auto">

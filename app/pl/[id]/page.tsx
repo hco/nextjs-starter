@@ -3,6 +3,7 @@ import { VideoThumbnail } from "@/components/video-thumbnail";
 
 // argh
 export const dynamic = "force-dynamic";
+export const revalidate = 60;
 
 export default async function ({ params }: any) {
   const { data: playlist } = await bold.playlists.get(params.id);
