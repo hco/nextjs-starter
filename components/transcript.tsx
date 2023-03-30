@@ -43,7 +43,7 @@ export function Transcript({
         }, [])
       : [];
 
-    console.log("word salad", words);
+    console.log("word salad", words, playerRef);
 
     const onTimeUpdate = () => {
       const wordNodes = document.getElementsByClassName(
