@@ -12,7 +12,8 @@ export function VideoDetail({ video }: VideoDetailProps) {
   const playerRef = useRef<HTMLVideoElement>(null);
 
   const handleCueClick = (time: number) => {
-    if (playerRef?.current) playerRef.current.currentTime = time;
+    const toTime = isNaN(time) ? 0.1 : parseFloat(time.toString())
+    if (playerRef?.current) playerRef.current.currentTime = toTime;
   };
 
   return (

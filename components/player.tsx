@@ -54,7 +54,13 @@ export const Player = forwardRef(function Player(
 
   return (
     <>
-      <div className={isOutOfView ? "fixed bottom-0 right-0 w-1/3" : ""}>
+      <div
+        className={
+          isOutOfView
+            ? "fixed sm:bottom-0 sm:right-0 sm:top-auto top-0 w-full sm:w-1/2 lg:w-1/3 bg-black"
+            : ""
+        }
+      >
         <MuxPlayer
           autoPlay={autoPlay}
           playbackId={video.playback_id}
