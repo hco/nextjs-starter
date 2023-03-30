@@ -43,8 +43,6 @@ export function Transcript({
         }, [])
       : [];
 
-    console.log("word salad", words, playerRef);
-
     const onTimeUpdate = () => {
       const wordNodes = document.getElementsByClassName(
         "text"
@@ -58,9 +56,7 @@ export function Transcript({
       });
 
       const active = wordNodes[activeIndex];
-      console.log("timeupdate - active node", active);
       if (hl && active) {
-        console.log("active", hl.style);
         hl.style.display = "inline-block";
         hl.style.top = `${active.offsetTop - 4}px`;
         hl.style.left = `${active.offsetLeft - 4}px`;
