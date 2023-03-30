@@ -82,7 +82,7 @@ export function Transcript({
         );
       }
     };
-  }, [data]);
+  }, [data, playerRef]);
 
   const handleCueClick = (time: number) => {
     if (onCueClick) onCueClick(time - 0.5);
