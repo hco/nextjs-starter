@@ -1,13 +1,9 @@
 "use client";
-import MuxPlayer from "@mux/mux-player-react";
+import MuxPlayer, {
+  MuxPlayerRefAttributes as MuxPlayerElement,
+} from "@mux/mux-player-react";
 import { bold } from "client";
-import {
-  forwardRef,
-  useEffect,
-  useImperativeHandle,
-  useRef,
-  useState,
-} from "react";
+import { forwardRef, useEffect, Ref, useRef, useState } from "react";
 
 export const Player = forwardRef(function Player(
   {
@@ -24,10 +20,10 @@ export const Player = forwardRef(function Player(
   ref
 ) {
   // const [scrollTop, setScrollTop] = useState<number>(0);
-  const playerRef = useRef(null);
+  // const playerRef = useRef(null);
   const prevScrollY = useRef(0);
   const [isOutOfView, setIsOutOfView] = useState<boolean>(false);
-  useImperativeHandle(ref, () => playerRef.current);
+  // useImperativeHandle(ref, () => playerRef.current);
 
   useEffect(() => {
     bold.trackPageView(video.title);
@@ -67,7 +63,7 @@ export const Player = forwardRef(function Player(
           onPause={(e) => bold.trackEvent(video, e)}
           onLoadedMetadata={(e) => bold.trackEvent(video, e)}
           currentTime={currentTime}
-          ref={playerRef}
+          ref={ref as Ref<MuxPlayerElement> | undefined}
           className="h-full"
         />
       </div>
