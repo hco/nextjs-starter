@@ -68,6 +68,7 @@ export const Player = forwardRef(function Player(
           onLoadedMetadata={(e) => bold.trackEvent(video, e)}
           currentTime={currentTime}
           ref={playerRef}
+          className="h-full"
         />
       </div>
     </>
