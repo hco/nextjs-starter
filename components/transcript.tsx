@@ -36,11 +36,11 @@ export function Transcript({
     // crate flat word list
     const words = data?.monologues
       ? data.monologues.reduce((acc: any, block: Monologue) => {
-          return block.elements.reduce((acc2: any, el: Cue) => {
-            if (el.ts) acc2.push(el);
-            return acc2;
-          }, acc);
-        }, [])
+        return block.elements.reduce((acc2: any, el: Cue) => {
+          if (el.ts) acc2.push(el);
+          return acc2;
+        }, acc);
+      }, [])
       : [];
 
     const onTimeUpdate = () => {
@@ -86,6 +86,10 @@ export function Transcript({
 
   if (error) return null;
   if (!data) return <p>loading</p>;
+
+  if (data.monologues.length < 1) {
+    return null;
+  }
 
   return (
     <div className="relative">
