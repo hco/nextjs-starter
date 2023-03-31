@@ -9,6 +9,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "**.mux.com",
       },
+      {
+        protocol: "https",
+        hostname: "uploads.eu1.boldvideo.io",
+      },
     ],
   },
 };
