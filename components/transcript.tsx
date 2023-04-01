@@ -36,11 +36,11 @@ export function Transcript({
     // crate flat word list
     const words = data?.monologues
       ? data.monologues.reduce((acc: any, block: Monologue) => {
-        return block.elements.reduce((acc2: any, el: Cue) => {
-          if (el.ts) acc2.push(el);
-          return acc2;
-        }, acc);
-      }, [])
+          return block.elements.reduce((acc2: any, el: Cue) => {
+            if (el.ts) acc2.push(el);
+            return acc2;
+          }, acc);
+        }, [])
       : [];
 
     const onTimeUpdate = () => {
@@ -98,7 +98,7 @@ export function Transcript({
       </h2>
       <span
         id="highlighter"
-        className="absolute pl-1 pt-0.5 rounded-sm text-xl transition-all duration-75 w-12 text-black bg-highlight-600 z-10 hidden"
+        className="absolute pl-1 pt-0.5 rounded-sm text-xl transition-all duration-75 w-12 text-black bg-primary z-10 hidden"
       />
       <div className="text-xl">
         {data.monologues.map((block: any, id: number) => {
@@ -112,7 +112,7 @@ export function Transcript({
                 className="mb-2"
                 onClick={() => handleCueClick(block.elements[0].ts)}
               >
-                <strong className="cursor-pointer hover:text-highlight-600">
+                <strong className="cursor-pointer hover:text-primary">
                   Speaker {block.speaker} [
                   {formatDuration(block.elements[0].ts)}]
                 </strong>
@@ -122,7 +122,7 @@ export function Transcript({
                   return (
                     <span
                       key={`ts_${el.ts || `${el.value}-${id}`}`}
-                      className={`${el.type} cursor-pointer hover:text-highlight-600`}
+                      className={`${el.type} cursor-pointer hover:text-primary`}
                       data-ts={el.ts}
                       data-end-ts={el.end_ts}
                       onClick={() => handleCueClick(el.ts)}

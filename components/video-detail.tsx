@@ -12,10 +12,10 @@ export function VideoDetail({ video }: VideoDetailProps) {
   const playerRef = useRef<HTMLVideoElement>(null);
 
   const handleCueClick = (time: number) => {
-    const toTime = isNaN(time) ? 0.1 : parseFloat(time.toString())
+    const toTime = isNaN(time) ? 0.1 : parseFloat(time.toString());
     if (playerRef?.current) {
       playerRef.current.currentTime = toTime;
-      playerRef.current.play()
+      playerRef.current.play();
     }
   };
 
@@ -24,7 +24,7 @@ export function VideoDetail({ video }: VideoDetailProps) {
       <div className="z-20 relative -mx-5 md:-mx-10 -mt-5 md:-mt-10 mb-5 md:mb-10 flex justify-center bg-black w-screen aspect-video max-h-[calc(100vh-240px)]">
         <Player video={video} autoPlay={true} ref={playerRef} />
       </div>
-      <div className="md:max-w-4xl mx-auto px-5 md:px-10">
+      <div className="md:max-w-4xl w-full mx-auto px-5 md:px-10">
         <h1 className="text-3xl md:text-[42px] font-extrabold mb-4 leading-tight">
           {video.title}
         </h1>
@@ -32,14 +32,16 @@ export function VideoDetail({ video }: VideoDetailProps) {
           {formatRelative(new Date(video.published_at), new Date())}
         </p>
         <p className="text-[21px] mb-12">{video.description}</p>
-        <hr className="mb-12 border-gray-700" />
 
         {video?.transcript?.json?.url ? (
-          <Transcript
-            url={video.transcript.json.url}
-            playerRef={playerRef}
-            onCueClick={handleCueClick}
-          />
+          <>
+            <hr className="mb-12 border-gray-700" />
+            <Transcript
+              url={video.transcript.json.url}
+              playerRef={playerRef}
+              onCueClick={handleCueClick}
+            />
+          </>
         ) : null}
       </div>
     </div>
