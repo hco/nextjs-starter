@@ -5,10 +5,9 @@ export const dynamic = "force-dynamic";
 export const revalidate = 60;
 
 export default async function ({ params }: any) {
-  // const [currentTime, setCurrentTime] = useState<number>(0)
   const { data: video } = await bold.videos.get(params.id);
 
   if (!video) return <p>loading</p>;
 
-  return <VideoDetail video={video} />
+  return <VideoDetail video={video} />;
 }

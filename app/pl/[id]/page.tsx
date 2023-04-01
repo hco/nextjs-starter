@@ -1,7 +1,6 @@
 import { bold } from "@/client";
 import { VideoThumbnail } from "@/components/video-thumbnail";
 
-// argh
 export const dynamic = "force-dynamic";
 export const revalidate = 60;
 
