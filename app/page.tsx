@@ -22,12 +22,19 @@ export default async function Home() {
       {settings.featured_playlists.map((pl) => {
         return (
           <>
-            <h2 className="flex font-bold text-3xl mb-5 items-center">
-              <Link href={`/pl/${pl.id}`}>{pl.title}</Link>
-              <span className="font-normal text-base text-gray-400 ml-3 px-3 py-2 border-gray-800  border rounded-full">
-                {pl.videos.length} Videos
-              </span>
-            </h2>
+            <div className="flex justify-between items-center mb-5">
+              <h2 className="font-bold text-3xl">
+                <Link href={`/pl/${pl.id}`} className="flex items-center">
+                  <span className="hover:text-primary">{pl.title}</span>
+                  <span className="font-normal text-base text-gray-600 ml-3 px-3 py-1 border-gray-200 hover:border-gray-600 hover:text-gray-800 hover:cursor-pointer border rounded-full">
+                    {pl.videos.length} Videos
+                  </span>
+                </Link>
+              </h2>
+              <Link href={`/pl/${pl.id}`} className="font-bold text-[18px] text-primary px-3 py-1 border-2 border-primary rounded-lg">
+                View All
+              </Link>
+            </div>
             <ul className="mb-16 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 md:gap-10">
               {pl.videos.map((vid) => (
                 <li key={vid.id}>

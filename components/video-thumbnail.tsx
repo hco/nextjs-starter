@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import formatRelative from "date-fns/formatRelative";
-import { formatDuration } from "util/format-duration"
+import { formatDuration } from "util/format-duration";
 
 export function VideoThumbnail({ video }: { video: any }) {
   return (
@@ -13,8 +13,8 @@ export function VideoThumbnail({ video }: { video: any }) {
           fill={true}
           className="object-cover"
         />
-        <span className="bg-gray-1000 text-white absolute z-10 px-2 py-1 font-semibold text-sm bottom-3 right-3 rounded">
-          { formatDuration(video.duration) }
+        <span className="bg-black text-white absolute z-10 px-2 py-1 font-semibold text-sm bottom-3 right-3 rounded">
+          {formatDuration(video.duration)}
         </span>
       </div>
       <h3 className="mt-4 font-semibold text-lg">
