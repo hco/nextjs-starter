@@ -9,10 +9,10 @@ import { bold } from "@/client";
 export const metadata: Metadata = {
   title: "Bold Video x Next.js Starterkit",
   description:
-    "Power up your video content with Bold Video and the TNT stack (Next.js, TailwindCSS, and TypeScript). Get started with automatic encoding and transcription in minutes.",
+    "Bold Video + TNT (TypeScript, Next.js, Tailwind): Supercharge videos, rapid encoding/transcription.",
     openGraph: {
     title: 'Bold Video x Next.js Starterkit',
-    description: 'Power up your video content with Bold Video and the TNT stack (Next.js, TailwindCSS, and TypeScript). Get started with automatic encoding and transcription in minutes.',
+    description: 'Bold Video + TNT (TypeScript, Next.js, Tailwind): Supercharge videos, rapid encoding/transcription.',
     url: 'https://starter-demo.wearebold.af',
     siteName: 'Bold Video x Next.js Starterkit',
     images: [
