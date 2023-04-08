@@ -4,6 +4,7 @@ import Link from "next/link";
 import "./globals.css";
 
 import logo from "../public/acmenet.png";
+import { bold } from "@/client";
 
 export const metadata: Metadata = {
   title: "Bold Video x Next.js Starterkit",
@@ -11,11 +12,12 @@ export const metadata: Metadata = {
     "Power up your video content with Bold Video and the TNT stack (Next.js, TailwindCSS, and TypeScript). Get started with automatic encoding and transcription in minutes.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const { data: settings } = await bold.settings();
   return (
     <html lang="en">
       <body className="bg-white text-black">
@@ -27,10 +29,7 @@ export default function RootLayout({
               </Link>
             </h1>
             <div className="flex font-semibold text-lg px-3 gap-6">
-              <Link className="hover:text-primary" href="/">Latest Videos</Link>
-              <Link className="hover:text-primary" href="/">Onboarding</Link>
-              <Link className="hover:text-primary" href="/">Acme Academy</Link>
-              <Link className="hover:text-primary" href="/">Playlists</Link>
+              {settings.menu_items.map(item => <Link className="hover:text-primary" href={item.url}>{item.label}</Link>)}
             </div>
             <div className="flex-1 flex justify-end">&nbsp;</div>
           </nav>
