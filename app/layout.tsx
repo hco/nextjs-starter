@@ -10,6 +10,21 @@ export const metadata: Metadata = {
   title: "Bold Video x Next.js Starterkit",
   description:
     "Power up your video content with Bold Video and the TNT stack (Next.js, TailwindCSS, and TypeScript). Get started with automatic encoding and transcription in minutes.",
+    openGraph: {
+    title: 'Bold Video x Next.js Starterkit',
+    description: 'Power up your video content with Bold Video and the TNT stack (Next.js, TailwindCSS, and TypeScript). Get started with automatic encoding and transcription in minutes.',
+    url: 'https://starter-demo.wearebold.af',
+    siteName: 'Bold Video x Next.js Starterkit',
+    images: [
+      {
+        url: '/og-static.png',
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: 'en-US',
+    type: 'website',
+  },
 };
 
 export default async function RootLayout({
