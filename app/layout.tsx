@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     siteName: 'Bold Video x Next.js Starterkit',
     images: [
       {
-        url: '/og-static.png',
+        url: 'https://starter-demo.wearebold.af/og-static.png',
         width: 1200,
         height: 630,
       },
