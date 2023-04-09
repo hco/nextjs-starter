@@ -13,7 +13,7 @@ export function VideoThumbnail({ video }: { video: any }) {
           fill={true}
           className="object-cover"
         />
-        <span className="bg-black text-white absolute z-10 px-2 py-1 font-semibold text-sm bottom-3 right-3 rounded">
+        <span className="bg-black text-white absolute px-2 py-1 font-semibold text-sm bottom-3 right-3 rounded">
           {formatDuration(video.duration)}
         </span>
       </div>

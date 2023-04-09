@@ -5,16 +5,17 @@ import "./globals.css";
 
 import logo from "../public/acmenet.png";
 import { bold } from "@/client";
+import { MobileMenu } from "@/components/mobile-menu";
 
 export const metadata: Metadata = {
-  title: "Bold Video x Next.js Starterkit",
+  title: "Bold Video x Next.js starter kit",
   description:
-    "Bold Video Starterkit: Supercharge videos, rapid encoding/transcription.",
+    "Bold Video starter kit: Supercharge videos, rapid encoding/transcription.",
     openGraph: {
-    title: 'Bold Video x Next.js Starterkit',
-    description: 'Bold Video Starterkit: Supercharge videos, rapid encoding/transcription.',
+    title: 'Bold Video x Next.js starter kit',
+    description: 'Bold Video starter kit: Supercharge videos, rapid encoding/transcription.',
     url: 'https://starter-demo.wearebold.af',
-    siteName: 'Bold Video x Next.js Starterkit',
+    siteName: 'Bold Video x Next.js starter kit',
     images: [
       {
         url: 'https://starter-demo.wearebold.af/og-static.png',
@@ -36,17 +37,22 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className="bg-white text-black">
-        <header className=" px-5 md:px-10 py-4">
-          <nav className="flex items-center justify-between ">
+        <header className=" px-5 md:px-10 py-4 md:py-5">
+          <nav className="flex items-center md:justify-between ">
             <h1 className="flex-1">
               <Link href="/">
-                <Image src={logo} alt="acmenet Mediahub" height="78" />
+                <Image src={logo} alt="acmenet Mediahub" className="h-12 md:h-20 object-contain object-left" />
               </Link>
             </h1>
-            <div className="flex font-semibold text-lg px-3 gap-6">
+            <div className="hidden md:flex font-semibold text-lg px-3 gap-6">
               {settings.menu_items.map(item => <Link className="hover:text-primary" key={item.url} href={item.url}>{item.label}</Link>)}
             </div>
-            <div className="flex-1 flex justify-end">&nbsp;</div>
+            <div className="hidden md:flex-1 flex justify-end">&nbsp;</div>
+
+            <div className="flex md:hidden">
+              <MobileMenu menuItems={settings.menu_items} />
+            </div>
+
           </nav>
         </header>
         <main className="p-5 md:p-10">{children}</main>
