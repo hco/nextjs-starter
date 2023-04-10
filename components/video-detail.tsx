@@ -21,7 +21,7 @@ export function VideoDetail({ video }: VideoDetailProps) {
 
   return (
     <div className="flex flex-col">
-      <div className="z-20 relative -mx-5 md:-mx-10 -mt-5 md:-mt-10 mb-5 md:mb-10 flex justify-center bg-black w-screen aspect-video max-h-[calc(100vh-240px)]">
+      <div className="z-40 relative -mx-5 md:-mx-10 -mt-5 md:-mt-10 mb-5 md:mb-10 flex justify-center bg-black w-screen aspect-video max-h-[calc(100vh-240px)]">
         <Player video={video} autoPlay={true} ref={playerRef} />
       </div>
       <div className="md:max-w-4xl w-full mx-auto px-5 md:px-10">

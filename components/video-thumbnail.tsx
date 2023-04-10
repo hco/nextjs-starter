@@ -12,6 +12,7 @@ export function VideoThumbnail({ video }: { video: any }) {
           alt={video.title}
           fill={true}
           className="object-cover"
+          sizes="100vw, (max-width: 640px) 640px"
         />
         <span className="bg-black text-white absolute px-2 py-1 font-semibold text-sm bottom-3 right-3 rounded">
           {formatDuration(video.duration)}

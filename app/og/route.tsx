@@ -15,7 +15,6 @@ export async function GET(request: Request) {
 
   const hasTitle = searchParams.has('t');
   const hasImage = searchParams.has('img');
-  // const hasImages = searchParams.has('imgs');
 
   if (hasTitle && hasImage) {
     return new ImageResponse(

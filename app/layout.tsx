@@ -45,7 +45,7 @@ export default async function RootLayout({
               </Link>
             </h1>
             <div className="hidden md:flex font-semibold text-lg px-3 gap-6">
-              {settings.menu_items.map(item => <Link className="hover:text-primary" key={item.url} href={item.url}>{item.label}</Link>)}
+              {settings.menu_items.map(item => <Link className="hover:text-primary" key={item.label} href={item.url}>{item.label}</Link>)}
             </div>
             <div className="hidden md:flex-1 flex justify-end">&nbsp;</div>
 

@@ -52,7 +52,7 @@ export function Transcript({
       const bhl = document.getElementById("block-highlighter");
       const activeIndex = words.findIndex((word: any) => {
         return (
-          word.ts >= playerRef.current.currentTime - 0.25 &&
+          word.ts >= playerRef.current.currentTime &&
           playerRef.current.currentTime <= word.end_ts
         );
       });

@@ -62,6 +62,7 @@ export const Player = forwardRef(function Player(
         }
       >
         <MuxPlayer
+          streamType="on-demand"
           autoPlay={autoPlay}
           playbackId={video.playback_id}
           onTimeUpdate={handleTimeUpdate}
