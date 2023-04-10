@@ -8,14 +8,14 @@ import { bold } from "@/client";
 import { MobileMenu } from "@/components/mobile-menu";
 
 export const metadata: Metadata = {
-  title: "Bold Video x Next.js starter kit",
+  title: "Bold Video x Next.js Starter Kit",
   description:
-    "Bold Video starter kit: Supercharge videos, rapid encoding/transcription.",
+    "Bold Video Starter Kit: Supercharge videos, rapid encoding/transcription.",
     openGraph: {
-    title: 'Bold Video x Next.js starter kit',
-    description: 'Bold Video starter kit: Supercharge videos, rapid encoding/transcription.',
+    title: 'Bold Video x Next.js Starter Kit',
+    description: 'Bold Video Starter Kit: Supercharge videos, rapid encoding/transcription.',
     url: 'https://starter-demo.wearebold.af',
-    siteName: 'Bold Video x Next.js starter kit',
+    siteName: 'Bold Video x Next.js Starter Kit',
     images: [
       {
         url: 'https://starter-demo.wearebold.af/og-static.png',
