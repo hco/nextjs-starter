@@ -44,10 +44,12 @@ export function Transcript({
       : [];
 
     const onTimeUpdate = () => {
+      // `text` class is coming from the transcript type
       const wordNodes = document.getElementsByClassName(
         "text"
       ) as HTMLCollectionOf<HTMLElement>;
       const hl = document.getElementById("highlighter");
+      const bhl = document.getElementById("block-highlighter");
       const activeIndex = words.findIndex((word: any) => {
         return (
           word.ts >= playerRef.current.currentTime - 0.25 &&
@@ -56,13 +58,20 @@ export function Transcript({
       });
 
       const active = wordNodes[activeIndex];
-      if (hl && active) {
+      const parent = active?.parentElement;
+      if (hl && bhl && active && parent) {
         hl.style.display = "inline-block";
         hl.style.top = `${active.offsetTop - 4}px`;
         hl.style.left = `${active.offsetLeft - 4}px`;
         hl.style.width = `${active.offsetWidth + 8}px`;
         hl.style.height = `${active.offsetHeight + 8}px`;
         hl.textContent = words[activeIndex].value;
+
+        bhl.style.display = "inline-block";
+        bhl.style.top = `${parent.offsetTop - 4}px`;
+        bhl.style.left = `${parent.offsetLeft - 4}px`;
+        bhl.style.width = `${parent.offsetWidth + 8}px`;
+        bhl.style.height = `${parent.offsetHeight + 8}px`;
       }
     };
 
@@ -98,7 +107,11 @@ export function Transcript({
       </h2>
       <span
         id="highlighter"
-        className="absolute pl-1 pt-0.5 rounded-sm text-xl transition-all duration-75 w-12 text-black bg-primary z-10 hidden"
+        className="absolute pl-1 pt-0.5 rounded-sm text-xl transition-all duration-75 w-12 text-white bg-primary z-20 hidden"
+      />
+      <span
+        id="block-highlighter"
+        className="absolute pl-1 pt-0.5 rounded-sm transition-all duration-75 bg-primary bg-opacity-20 z-10 hidden"
       />
       <div className="text-xl">
         {data.monologues.map((block: any, id: number) => {
@@ -117,7 +130,7 @@ export function Transcript({
                   {formatDuration(block.elements[0].ts)}]
                 </strong>
               </div>
-              <p className="">
+              <p className="paragraph">
                 {block.elements.map((el: any, id: number) => {
                   return (
                     <span
