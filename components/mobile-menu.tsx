@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 
-import logo from "../public/acmenet.png";
+import logo from "../public/yourlogohere.png";
 import Link from "next/link";
 
 type MenuItem = {
@@ -48,7 +48,7 @@ export function MobileMenu({ menuItems }: Props) {
                 <Image
                   src={logo}
                   alt="acmenet Mediahub"
-                  className="h-12 md:h-20 object-contain object-left"
+                  className="h-12 md:h-16 object-contain object-left"
                 />
               </Link>
               <button
