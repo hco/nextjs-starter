@@ -1,38 +1,99 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
+    <a href="https://wearebold.af?utm_source=github.com&utm_medium=readme&utm_campaign=bold-js" align="center">
+		<img src="https://wearebold.af/bold-js-github-header.svg"  alt="Bold Logo">
+	</a>
+	<h1 align="center rainbow">nextjs-starter</h1>
+    <p align="center">
+        Starter Kit The easiest way to get started with <a href="http://wearebold.af?utm_source=github.com&utm_medium=readme&utm_campaign=bold-js" target="_blank">Bold Video</a>. Create a fully-featured Video Portal with a single command.
+    </p>
+</div>
+
+<p align="center">
+  <a href="https://twitter.com/intent/follow?screen_name=veryboldvideo">
+    <img src="https://img.shields.io/badge/Follow-%40veryboldvideo-09b3af?style=appveyor&logo=twitter" alt="Follow @veryboldvideo" />
+  </a>
+  <a href="https://https://app.boldvideo.io/register?utm_source=github.com&utm_medium=readme&utm_campaign=bold-js">
+    <img src="https://img.shields.io/badge/Try%20Bold-Free-09b3af?style=appveyor&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAmCAYAAADTGStiAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGFSURBVHgBxZg9SwNBEIZ34xUpVLCwEQQRtRARxV+g4M8QLO0sBPtgZS129gr+AbEWWyshOUSCkipBjB8cBHPrM4GVQ84qZuaFJTebj+feyczu3fmxEIIbXjnjjZEy7hm3feeunfdPf33B/xO4TBk/fMoZHXMCHU1wVBP3m8Cb2mDRI/AN4K9xouJ0NA9ovzih5Vj0jutZXHcl0HIsmkicW4uBJtiR2kUr8KQJGPVMwJ62sgJ//hxrtROQNsvnDO30JbGaY9xeROggVnLcY/FYAPwcJ7Qc7xahKmAAe33vz0vmRysK6rASQs2FUC3Oq1U1xZVSWVukvCWxWlXjbgnYFc6nVMEiXK+wQx0MjhX346gPWmtOe5MQjQPdsQBLylctUi3gholjnE6bgFHVCpxZgR+s/uOGVTvdWLTTCyvXurpj3J7IfbOqY0BpLrcx3mea22Id6LZAJdYA56T3COhy8dFE4kYkHN7xcgnwDGD79/sJH6i54SQ1ItfLXZx1GC2CehmsqG96m37o1gSKagAAAABJRU5ErkJggg==" alt="Try Bold Video" />
+  </a>
+</p>
+Welcome to the Bold Video Starter Kit, the easiest way to get started with [Bold Video](https://wearebold.af). This project is based on Next.js and Tailwind CSS and offers a simple and effective way to create video applications using Bold.
 
 ## Getting Started
+There are two ways to get started: automatic mode and manual mode.
 
-First, run the development server:
+### Automatic Mode
+Use one of the following commands:
 
 ```bash
-npm run dev
+npx create-bold-app
 # or
-yarn dev
+yarn create bold-app
 # or
-pnpm dev
+pnpm create bold-app
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+You will be prompted to enter the app's name and the API key, which you can get from [https://app.boldvideo.io/settings](https://app.boldvideo.io/settings).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Manual Mode
+1. Clone this repository or use the GitHub template: https://github.com/boldvideo/nextjs-starter
+2. Add the BOLD API key ([from https://app.boldvideo.io/settings](https://app.boldvideo.io/settings)) to `.env.local`.
+3. Start the app with one of the following commands:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```bash
+pnpm run dev
+yarn run dev
+npm run dev
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+After running the app, it will be available at localhost:3000.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Customization
+### Logo
+To change the logo placeholder, replace the image file in the `/public` folder. The logo is used in the files `app/layout.tsx` and `components/mobile-menu.tsx`.
 
-## Learn More
+### Main Navigation
+(TBD)
 
-To learn more about Next.js, take a look at the following resources:
+### Adding Videos and Playlists
+(TBD)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Color Customization
+To customize the colors of your application, you can modify the `tailwind.config.js` file located in the root of the project. The file contains two custom colors, background and primary, which you can adjust according to your needs or brand guidelines.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```javascript
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        white: "#ffffff",
+        black: "#000000",
+        background: "#111827",
+        primary: "#FF206E",
+      },
+    },
+  },
+  plugins: [],
+};
+```
 
-## Deploy on Vercel
+After updating the colors, your application will automatically reflect the new color scheme.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deployment
+To deploy your app on [Vercel](https://vercel.com), follow these steps:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Sign up for a free account on [Vercel](https://vercel.com).
+2. Install the Vercel CLI by running `npm i -g vercel`.
+3. Run `vercel login` and enter your Vercel account credentials.
+4. Run `vercel` to deploy your app.
+
+Your app will be deployed to a unique URL, and you can manage it through the Vercel dashboard.
+
+## Feedback and Issues
+If you encounter any issues or have feedback, please [create an issue](https://github.com/boldvideo/nextjs-starter/issues) on GitHub.
+
