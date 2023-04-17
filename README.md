@@ -52,7 +52,16 @@ After running the app, it will be available at localhost:3000.
 To change the logo placeholder, replace the image file in the `/public` folder. The logo is used in the files `app/layout.tsx` and `components/mobile-menu.tsx`.
 
 ### Main Navigation
-(TBD)
+To create new menu items, go to the [Main Menu Settings](https://app.boldvideo.io/settings/main-menu) Page in the Bold Admin Panel.
+
+<img src="https://github.com/boldvideo/nextjs-starter/blob/main/.github/media/screenshot-settings-main-menu.png?raw=true" width="50%" />
+
+If you want to change the appearance of the links, you can find the code for the navigation in the following files:
+
+`app/layout.tsx`
+`components/mobile-menu.tsx`
+
+You can modify these files to adjust the styling or layout of the navigation according to your preferences.
 
 ### Adding Videos and Playlists
 (TBD)
