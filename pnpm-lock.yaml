@@ -2,7 +2,6 @@ lockfileVersion: 5.4
 
 specifiers:
   '@boldvideo/bold-js': ^0.1.0
-  '@headlessui/react': ^1.7.13
   '@mux/mux-player-react': ^1.9.0
   '@next/font': 13.3.0
   '@types/node': 18.15.11
@@ -20,11 +19,9 @@ specifiers:
   swr: ^2.1.1
   tailwindcss: ^3.3.1
   typescript: 5.0.3
-  vtt.js: ^0.13.0
 
 dependencies:
   '@boldvideo/bold-js': 0.1.0
-  '@headlessui/react': 1.7.13_biqbaboplfbrettd7655fr4n2y
   '@mux/mux-player-react': 1.9.0_ddal5w4bzhvnvvplv3twufcima
   '@next/font': 13.3.0
   '@types/node': 18.15.11
@@ -39,7 +36,6 @@ dependencies:
   react-dom: 18.2.0_react@18.2.0
   swr: 2.1.1_react@18.2.0
   typescript: 5.0.3
-  vtt.js: 0.13.0
 
 devDependencies:
   autoprefixer: 10.4.14_postcss@8.4.21
@@ -98,18 +94,6 @@ packages:
   /@eslint/js/8.37.0:
     resolution: {integrity: sha512-x5vzdtOOGgFVDCUs81QRB2+liax8rFg3+7hqM+QhBG0/G3F1ZsoYl97UrqgHgQ9KKT7G6c4V+aTUCgu/n22v1A==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-    dev: false
-
-  /@headlessui/react/1.7.13_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-9n+EQKRtD9266xIHXdY5MfiXPDfYwl7zBM7KOx2Ae3Gdgxy8QML1FkCMjq6AsOf0l6N9uvI4HcFtuFlenaldKg==}
-    engines: {node: '>=10'}
-    peerDependencies:
-      react: ^16 || ^17 || ^18
-      react-dom: ^16 || ^17 || ^18
-    dependencies:
-      client-only: 0.0.1
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
     dev: false
 
   /@humanwhocodes/config-array/0.11.8:
@@ -2686,10 +2670,6 @@ packages:
   /util-deprecate/1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
     dev: true
-
-  /vtt.js/0.13.0:
-    resolution: {integrity: sha512-t0OJvTmsryCOIHdLWmUPx6V3e0MRGaZMp0Cr5DETWrWNfg9RCHcQlF7X7zNF4mQxhtkyiVKOefdSErSB/KWgOA==}
-    dev: false
 
   /which-boxed-primitive/1.0.2:
     resolution: {integrity: sha512-bwZdv0AKLpplFY2KZRX6TvyuN7ojjr7lwkg6ml0roIy9YeuSr7JS372qlNW18UQYzgYK9ziGcerWqZOmEn9VNg==}
