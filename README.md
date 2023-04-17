@@ -16,7 +16,7 @@
     <img src="https://img.shields.io/badge/Try%20Bold-Free-09b3af?style=appveyor&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAmCAYAAADTGStiAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGFSURBVHgBxZg9SwNBEIZ34xUpVLCwEQQRtRARxV+g4M8QLO0sBPtgZS129gr+AbEWWyshOUSCkipBjB8cBHPrM4GVQ84qZuaFJTebj+feyczu3fmxEIIbXjnjjZEy7hm3feeunfdPf33B/xO4TBk/fMoZHXMCHU1wVBP3m8Cb2mDRI/AN4K9xouJ0NA9ovzih5Vj0jutZXHcl0HIsmkicW4uBJtiR2kUr8KQJGPVMwJ62sgJ//hxrtROQNsvnDO30JbGaY9xeROggVnLcY/FYAPwcJ7Qc7xahKmAAe33vz0vmRysK6rASQs2FUC3Oq1U1xZVSWVukvCWxWlXjbgnYFc6nVMEiXK+wQx0MjhX346gPWmtOe5MQjQPdsQBLylctUi3gholjnE6bgFHVCpxZgR+s/uOGVTvdWLTTCyvXurpj3J7IfbOqY0BpLrcx3mea22Id6LZAJdYA56T3COhy8dFE4kYkHN7xcgnwDGD79/sJH6i54SQ1ItfLXZx1GC2CehmsqG96m37o1gSKagAAAABJRU5ErkJggg==" alt="Try Bold Video" />
   </a>
 </p>
-Welcome to the Bold Video Starter Kit, the easiest way to get started with [Bold Video](https://wearebold.af). This project is based on Next.js and Tailwind CSS and offers a simple and effective way to create video applications using Bold.
+Welcome to the Bold Video Starter Kit, the easiest way to get started with <a href="http://wearebold.af?utm_source=github.com&utm_medium=readme&utm_campaign=bold-js" target="_blank">Bold Video</a>. This project is based on Next.js and Tailwind CSS and offers a simple and effective way to create video applications using Bold.
 
 ## Getting Started
 There are two ways to get started: automatic mode and manual mode.
@@ -64,7 +64,16 @@ If you want to change the appearance of the links, you can find the code for the
 You can modify these files to adjust the styling or layout of the navigation according to your preferences.
 
 ### Adding Videos and Playlists
-(TBD)
+To add videos, go to the "Videos" page by following this link: https://app.boldvideo.io/videos and click the "New Video" Button. Only videos with the "Status" set to "public" will appear on the index page of the Starter Kit.
+
+<img src="https://github.com/boldvideo/nextjs-starter/blob/main/.github/media/screenshot-videos.png?raw=true" width="50%" />
+
+To add playlists, go to the "Playlists" page by following this link: https://app.boldvideo.io/playlists.
+
+<img src="https://github.com/boldvideo/nextjs-starter/blob/main/.github/media/screenshot-playlists.png?raw=true" width="50%" />
+
+To feature playlists on the index page, add them to "Featured Playlists" under Settings -> Featured Playlists by following this link: https://app.boldvideo.io/settings/featured-playlists.
+
 
 ### Color Customization
 To customize the colors of your application, you can modify the `tailwind.config.js` file located in the root of the project. The file contains two custom colors, background and primary, which you can adjust according to your needs or brand guidelines.
